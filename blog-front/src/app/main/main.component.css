@@ -1,0 +1,19 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+a:hover{
+  color: silver;
+  text-shadow: none;
+}
+
+.selected{
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 4px;
+  padding: 2px 4px 2px;
+  box-sizing: border-box;
+  color: black;
+}

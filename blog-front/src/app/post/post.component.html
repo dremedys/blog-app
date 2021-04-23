@@ -1,0 +1,36 @@
+<div class="post-container">
+  <a  class="edit-btn btn btn-secondary" *ngIf="allowEdit" routerLinkActive="active" routerLink="/main/edit-form/{{post.id}}">Edit a post</a>
+  <h1>{{post.title}}</h1>
+  <h5 class="category-text">Category: {{post.category.name}} </h5>
+  <p class="post-date">{{post.published_date | date:'medium'}}</p>
+  <p class="post-text">{{post.text}}</p>
+  <div class="one-row">
+    <button  class="like-btn" (click)="like(post.id)">👍{{likes.length}}</button>
+    <p class="post-author"> by @{{post.author.username}}</p>
+  </div>
+
+  <div class="comment-block">
+    <h5>Comments</h5>
+    <div *ngIf="comments.length>0; else nocomment"></div>
+    <div class="coms" *ngFor="let comment of comments">
+      <div class="com-container">
+        <p class="com-txt">
+          <span class="com-author">@{{comment.author.username}}</span>
+          {{comment.content}}
+        </p>
+      </div>
+    </div>
+
+    <ng-template #nocomment >
+      <div style="color: silver">No comments yet....</div>
+    </ng-template>
+
+
+    <div class="add-com">
+      <input [(ngModel)]="commentText" placeholder="Your comment..">
+      <button  (click)="leaveComment(post.id)">Send</button>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+                                                                                                                                                                                                                       #form-container{
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+#form-container input{
+  height: 30px;
+  margin-top: 50px;
+}
+#form-container textarea{
+  height: 100px;
+  width: 500px;
+}
+label{
+  color:white;
+}
+
+

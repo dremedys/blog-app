@@ -1,0 +1,12 @@
+<div class="auth-form">
+    <p style="color:wheat;">Register: </p>
+    <p><input placeholder="Your login:" [(ngModel)]="username" /></p>
+    <p><input placeholder="Enter your password" [(ngModel)]="password" /></p>
+    <p><input placeholder="Confirm your password" [(ngModel)]="password1" /></p>
+<!--  <p><input placeholder="Enter your password again" [(ngModel)]="password2" /></p>-->
+
+  <p><input placeholder="Enter your email" [(ngModel)]="email" /></p>
+
+  <button (click)="register()">Register</button>
+
+</div>

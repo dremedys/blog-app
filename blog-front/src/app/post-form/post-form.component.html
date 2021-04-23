@@ -1,0 +1,17 @@
+<div id="form-container">
+  <input class="input-group" [(ngModel)]="title" placeholder="Add a title...">
+  <br>
+  <br>
+  <textarea [(ngModel)]="text" placeholder="Add a text.."></textarea>
+  <br>
+
+  <label>Choose a category</label>
+  <form   [formGroup]="catForm">
+    <select class="form-select" id="categories" formControlName="catControl" >
+      <option [value]="cat.id" *ngFor="let cat of categories">{{cat.name}}</option>
+    </select>
+  </form>
+
+  <br>
+  <button (click)="createPost()">Create a post</button>
+</div>

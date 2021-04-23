@@ -1,0 +1,22 @@
+<div style="margin-top: 40px;">
+  <button (click)="goBack()" class="btn btn-info">Go back</button>
+  <br>
+  <br>
+  <div style="background-color: #282832; padding: 10px;" class="post-container">
+    <label style="color: aliceblue">Edit:</label>
+<!--    <h1 style="color:white">{{post.title}}</h1>-->
+    <input class="form-control" style="color: black" [(ngModel)]="newTitle" placeholder="New title">
+    <br>
+    <textarea class="form-control"  style="color: black" [(ngModel)]="newText" placeholder="New text"></textarea>
+<!--    <p style="color:white" class="post-text">{{post.author.username}}</p>-->
+    <br>
+    <a  style="text-shadow: none; color: wheat" class="category-text">Category: {{post.category.name}} </a>
+    <br>
+    <button  class="btn btn-success" (click)="editPost()">Submit changes</button>
+    <br>
+    <br>
+    <button class="btn btn-danger" (click)="deletePost()">Delete a post</button>
+
+  </div>
+
+</div>

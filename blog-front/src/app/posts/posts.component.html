@@ -1,0 +1,4 @@
+<input class="search" [(ngModel)]="searchString" placeholder="⌕   Filter post by text">
+<div *ngFor="let post of posts | postFilter :searchString;">
+  <app-post class="post-container" [post]="post"></app-post>
+</div>

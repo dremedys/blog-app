@@ -1,0 +1,10 @@
+<div *ngIf="posts.length; else noposts">
+  <div *ngFor="let post of posts">
+    <app-post class="post-container" [allowEdit]="true" [post]="post"></app-post>
+  </div>
+</div>
+
+<ng-template #noposts>
+  <h2 class="no-posts">You have no posts yet. Go to add post page.</h2>
+</ng-template>
+

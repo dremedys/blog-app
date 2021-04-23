@@ -1,0 +1,11 @@
+<div  class="container">
+  <a style="color:wheat;" >Welcome, {{currentUser()}}!</a>
+  <a [class.selected]="getRouter().url==='/main/posts'" routerLinkActive="active" routerLink="/main">News</a> |
+  <a [class.selected]="getRouter().url==='/main/post-form'" routerLinkActive="active" routerLink="/main/post-form">Create a new post</a> |
+  <a [class.selected]="getRouter().url==='/main/my-posts'" routerLinkActive="active" routerLink="/main/my-posts">My page</a>
+  <a (click)="logout()" routerLinkActive="active" routerLink="/auth">Logout</a>
+
+</div>
+  <router-outlet></router-outlet>
+
+

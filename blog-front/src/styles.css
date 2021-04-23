@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+  height: 100%;
+  box-sizing: border-box;
+  padding-left:7%;
+  padding-top: 1%;
+  padding-right: 7%;
+}
+body{
+  background-color: #21212a;
+}
+
+/* Login,register form styles*/
+.auth-form input::placeholder {
+  font-size: 1.1rem;
+  font-family: 'Montserrat';
+}
+
+.auth-form input,button {
+  box-sizing: border-box;
+  padding: 10px 5px 10px;
+  width: 200px;
+  font-size: 1.2em;
+
+}
+.auth-form input{
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.auth-form button{
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat';
+}
+
+.auth-form button:hover{
+  background-color: silver;
+  cursor: pointer;
+}
+
+
+a{
+  font-family: "Dubai Medium";
+  text-decoration: none;
+  color:white;
+  text-shadow: 1px 1px 1px gray, 0 0 1em gray;
+  font-size: 1.3rem;
+}
